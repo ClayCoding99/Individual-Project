@@ -23,8 +23,10 @@ const express = require('express');
 const app = express();
 
 const Routes = require('./routes');
+const Websockets = require('./websockets');
 
 app.use(Routes);
+app.use(Websockets);
 
 const port = 8000;
 app.listen(port, () => {
